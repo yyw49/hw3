@@ -9,8 +9,8 @@ template <typename T>
 class Stack : private std::vector<T>
 {
 public:
-    Stack();
-    ~Stack();
+    Stack(){};
+    ~Stack(){};
     bool empty() const
     {
         return std::vector<T>::empty();

@@ -93,13 +93,19 @@ int main(int argc, char* argv[])
 
     // Test out your linked list code
 Node* myList = readList("llrec-test1.in");
-cout<< "Orginal List:";
+Node* lower;
+Node* higher;
+
+llpivot(myList, lower, higher, 10);
+cout << "\n";
 print(myList);
-cout<<"New List:";
-isOdd pred;
-llfilter(myList, pred);
-print(myList);
+cout<< "Lower:";
+print(lower);
+cout <<"Higher";
+print(higher);
 dealloc(myList);
+dealloc(lower);
+dealloc(higher);
 
 
     
